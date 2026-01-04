@@ -11,8 +11,8 @@ const config = {
   theme: {
     extend: {
       colors: {
-        primary: '#1E40AF', // Professional blue
-        secondary: '#F59E0B', // Gold/Orange accent
+        primary: 'rgb(30 64 175 / <alpha-value>)', // Professional blue
+        secondary: 'rgb(245 158 11 / <alpha-value>)', // Gold/Orange accent
         neutral: {
           100: '#F3F4F6',
           200: '#E5E7EB',
