@@ -26,12 +26,23 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-16 bg-">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-center mb-12 text-primary">
-          What Our Clients Say
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <section className="py-24 bg-gray-50 relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-blue-600 font-bold tracking-widest uppercase text-sm mb-4">
+            Success Stories
+          </h2>
+          <h3 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
+            Trusted by Thousands of{' '}
+            <span className="text-blue-600">Global Travelers</span>
+          </h3>
+          <p className="text-gray-600 text-lg">
+            Don't just take our word for it. Here's what our clients have to say
+            about their experience with SoulLink.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {testimonials.map((t) => (
             <TestimonialCard key={t.name} {...t} />
           ))}
