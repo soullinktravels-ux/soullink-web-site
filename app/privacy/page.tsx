@@ -4,7 +4,9 @@ export default function PrivacyPage() {
       {/* Header */}
       <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Privacy Policy
+          </h1>
           <p className="text-slate-300 text-lg">Soullink Travels</p>
         </div>
       </div>
@@ -77,7 +79,9 @@ export default function PrivacyPage() {
                 Information Sharing
               </h2>
               <p className="text-slate-600 mb-3">
-                <strong>We do not sell or trade your personal information.</strong>
+                <strong>
+                  We do not sell or trade your personal information.
+                </strong>
               </p>
               <p className="text-slate-600 mb-4">
                 Your data may only be shared with:
@@ -85,7 +89,9 @@ export default function PrivacyPage() {
               <ul className="list-disc list-inside text-slate-600 space-y-2 ml-4 mb-4">
                 <li>Embassies, consulates, and immigration authorities</li>
                 <li>Airlines, hotels, and travel service providers</li>
-                <li>Trusted third parties involved in your travel processing</li>
+                <li>
+                  Trusted third parties involved in your travel processing
+                </li>
               </ul>
               <p className="text-slate-600 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
                 All sharing is done strictly for service delivery purposes.
@@ -103,8 +109,8 @@ export default function PrivacyPage() {
               <p className="text-slate-600">
                 We take reasonable and appropriate measures to protect your
                 personal data against loss, misuse, unauthorized access, or
-                disclosure. Access to client information is limited to authorized
-                personnel only.
+                disclosure. Access to client information is limited to
+                authorized personnel only.
               </p>
             </section>
 
@@ -117,9 +123,9 @@ export default function PrivacyPage() {
                 Data Retention
               </h2>
               <p className="text-slate-600">
-                We retain your personal information only for as long as necessary
-                to fulfill the purpose for which it was collected or as required
-                by law.
+                We retain your personal information only for as long as
+                necessary to fulfill the purpose for which it was collected or
+                as required by law.
               </p>
             </section>
 

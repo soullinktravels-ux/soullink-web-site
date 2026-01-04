@@ -6,9 +6,9 @@ export default function AboutPage() {
       {/* Header */}
       <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-amber-400 font-semibold mb-2 uppercase tracking-wider">
+          {/* <p className="text-amber-400 font-semibold mb-2 uppercase tracking-wider">
             About
-          </p>
+          </p> */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             About Soullink Travels
           </h1>
@@ -33,8 +33,8 @@ export default function AboutPage() {
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
               With a strong focus on clarity, transparency, and customer
               satisfaction, we support our clients through every stage of their
-              travel journey — from consultation and documentation to booking
-              and departure. Our services include Visit, Work, and Study Visa
+              travel, from consultation and documentation to booking and
+              departure. Our services include Visit, Work, and Study Visa
               assistance, Flight Booking, Hotel Reservation, and Travel
               Consultation, all delivered with professionalism and attention to
               detail.

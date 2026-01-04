@@ -1,13 +1,19 @@
+'use client';
+import { useState } from 'react';
 import HeroCarousel from '../components/home/HeroCarousel';
 import Services from '../components/home/Services';
 import Stats from '../components/home/Stats';
 import Testimonials from '../components/home/Testimonials';
 import CTA from '../components/home/CTA';
+import VisaEnquiryPopup from '../components/home/VisaEnquiryPopup';
 
 export default function Home() {
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
     <>
-      <HeroCarousel />
+      <VisaEnquiryPopup open={showPopup} onClose={() => setShowPopup(false)} />
+      <HeroCarousel onGetStarted={() => setShowPopup(true)} />
       <Services />
       <Stats />
       <Testimonials />

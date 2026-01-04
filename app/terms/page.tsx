@@ -67,7 +67,9 @@ export default function TermsPage() {
                 </span>
                 Client Responsibilities
               </h2>
-              <p className="text-slate-600 mb-4">Clients are responsible for:</p>
+              <p className="text-slate-600 mb-4">
+                Clients are responsible for:
+              </p>
               <ul className="list-disc list-inside text-slate-600 space-y-2 ml-4 mb-4">
                 <li>Providing accurate, complete, and truthful information</li>
                 <li>Submitting genuine and valid documents</li>

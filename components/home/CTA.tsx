@@ -17,18 +17,21 @@ export default function CTA() {
           </h2>
           <p className="text-blue-100 text-xl mb-10 max-w-2xl leading-relaxed">
             Join thousands of successful Nigerians who have achieved their
-            dreams of traveling, working, and living abroad with SoulLink.
+            dreams of traveling, working, and living abroad with SoulLink
+            Travels.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6">
-            <Link
-              href="/contact"
+            <a
+              href="https://wa.me/2349136201808?text=Hello%2C%20I%27d%20like%20to%20book%20a%20free%20consultation"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-10 py-5 bg-blue-500 text-white font-bold rounded-2xl shadow-xl shadow-blue-900/20 hover:bg-blue-400 hover:scale-105 transition-all duration-300 text-center text-lg"
             >
               Book a Free Consultation
-            </Link>
+            </a>
             <Link
-              href="/services/visa-processing"
+              href="/services"
               className="px-10 py-5 bg-white/10 backdrop-blur-md border-2 border-white/20 text-white font-bold rounded-2xl hover:bg-white/20 transition-all duration-300 text-center text-lg"
             >
               Explore Services
