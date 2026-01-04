@@ -5,7 +5,7 @@ const services = [
   {
     title: 'Visa Application Processing',
     description:
-      'Expert guidance for all visa types: Work, Study, Tourist, Business. Fast, reliable, and stress-free.',
+      'Expert guidance and processing for all visa types: Work, Study, Tourist, Business. Fast, reliable, and stress-free.',
     icon: '/images/services/visa-processing.jpg',
     link: '/services/visa-processing',
     features: [
@@ -13,32 +13,6 @@ const services = [
       'Application submission',
       'Status tracking',
       'Interview preparation',
-    ],
-  },
-  {
-    title: 'Job Application Abroad',
-    description:
-      'Country-specific job search, CV review, and interview prep to land your dream job overseas.',
-    icon: '/images/services/job-assistance.jpg',
-    link: '/services/job-assistance',
-    features: [
-      'CV optimization',
-      'Job market research',
-      'Interview coaching',
-      'Relocation support',
-    ],
-  },
-  {
-    title: 'Migration Services',
-    description:
-      'Complete relocation packages and settlement support for a smooth transition to your new country.',
-    icon: '/images/services/migration.jpg',
-    link: '/services/migration',
-    features: [
-      'Settlement assistance',
-      'Housing guidance',
-      'Legal support',
-      'Cultural orientation',
     ],
   },
   {
@@ -52,6 +26,32 @@ const services = [
       'Flexible booking',
       'Travel insurance',
       '24/7 support',
+    ],
+  },
+  {
+    title: 'Hotel/Accommodation Reservation',
+    description:
+      'Secure bookings for hotels, resorts, apartments. Comfortable stays worldwide.',
+    icon: '/images/services/migration.jpg',
+    link: '/services/accommodation',
+    features: [
+      'Hotel bookings',
+      'Resort reservations',
+      'Apartment rentals',
+      'Worldwide coverage',
+    ],
+  },
+  {
+    title: 'Visa Consultation',
+    description:
+      'Personalized expert advice on visa options, requirements and strategies including visa-free destinations for Nigerians.',
+    icon: '/images/services/job-assistance.jpg',
+    link: '/services/visa-consultation',
+    features: [
+      'Expert guidance',
+      'Visa-free destinations',
+      'Requirements analysis',
+      'Strategy planning',
     ],
   },
 ];

@@ -53,17 +53,17 @@ export default function HeroCarousel() {
             <div className="inline-block px-4 py-2 bg-amber-500 text-slate-900 rounded-full text-sm font-bold mb-6">
               ✈️ Your Trusted Travel Partner
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
-              Your Gateway to{' '}
-              <span className="text-amber-400">Global</span>{' '}
+              Your Gateway to <span className="text-amber-400">Global</span>{' '}
               Opportunities
             </h1>
-            
+
             <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-lg">
-              Simplifying Visa Applications, Job Placement Abroad, and International Travel for Nigerians
+              Simplifying Visa Applications, Job Placement Abroad, and
+              International Travel for Nigerians
             </p>
-            
+
             <div className="flex gap-4 mb-12 flex-col sm:flex-row">
               <a
                 href="/contact"
@@ -78,19 +78,27 @@ export default function HeroCarousel() {
                 Book Consultation
               </a>
             </div>
-            
+
             {/* Stats */}
             <div className="flex gap-8 flex-wrap">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-extrabold text-amber-400">10+</div>
+                <div className="text-3xl md:text-4xl font-extrabold text-amber-400">
+                  10+
+                </div>
                 <div className="text-sm text-slate-400">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-extrabold text-amber-400">2,000+</div>
-                <div className="text-sm text-slate-400">Successful Applications</div>
+                <div className="text-3xl md:text-4xl font-extrabold text-amber-400">
+                  2,000+
+                </div>
+                <div className="text-sm text-slate-400">
+                  Successful Applications
+                </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-extrabold text-amber-400">20+</div>
+                <div className="text-3xl md:text-4xl font-extrabold text-amber-400">
+                  20+
+                </div>
                 <div className="text-sm text-slate-400">Countries Covered</div>
               </div>
             </div>
@@ -112,7 +120,7 @@ export default function HeroCarousel() {
                   />
                 ))}
               </div>
-              
+
               {/* Floating info card */}
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                 <div className="flex items-center gap-3">
@@ -120,8 +128,12 @@ export default function HeroCarousel() {
                     <span className="text-2xl">🌍</span>
                   </div>
                   <div>
-                    <div className="font-bold text-slate-800">Ready to Travel?</div>
-                    <div className="text-sm text-slate-600">Get your visa in 2 hours</div>
+                    <div className="font-bold text-slate-800">
+                      Ready to Travel?
+                    </div>
+                    <div className="text-sm text-slate-600">
+                      Get your visa in 2 hours
+                    </div>
                   </div>
                 </div>
               </div>
