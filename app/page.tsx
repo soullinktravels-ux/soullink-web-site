@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <VisaEnquiryPopup open={showPopup} onClose={() => setShowPopup(false)} />
-      <HeroCarousel />
+      <HeroCarousel onGetStarted={() => setShowPopup(true)} />
       <Services />
       <Stats />
       <Testimonials />

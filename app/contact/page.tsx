@@ -53,7 +53,7 @@ export default function ContactPage() {
                     href="tel:+2349039871982"
                     className="text-blue-600 hover:underline"
                   >
-                    +234 903 987 1982
+                    +234 7036 280 825
                   </a>
                 </div>
               </div>
