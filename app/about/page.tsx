@@ -50,7 +50,7 @@ export default function AboutPage() {
           {/* Highlight Quote */}
           <div className="bg-gradient-to-r from-amber-500 to-amber-400 rounded-2xl p-8 md:p-12 text-center mb-12 shadow-lg">
             <p className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-              "At Soullink Travels, we don't just plan trips — we connect you to
+              "At Soullink Travels, we don't just plan trips, we connect you to
               the world."
             </p>
           </div>
