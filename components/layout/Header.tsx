@@ -47,7 +47,7 @@ export default function Header() {
             Contact Us
           </Link>
         </nav>
-        <button 
+        <button
           className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-amber-500"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -89,22 +89,22 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
           <nav className="flex flex-col px-6 py-4 space-y-4">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="text-slate-700 font-medium py-2 hover:text-amber-500 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </Link>
-            <Link 
-              href="/services" 
+            <Link
+              href="/services"
               className="text-slate-700 font-medium py-2 hover:text-amber-500 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Services
             </Link>
-            <Link 
-              href="/about" 
+            <Link
+              href="/about"
               className="text-slate-700 font-medium py-2 hover:text-amber-500 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
