@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const countries = [
   'Afghanistan',
@@ -196,7 +197,9 @@ export default function VisaEnquiryPopup({
     agree: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -235,7 +238,13 @@ export default function VisaEnquiryPopup({
         setSubmitStatus('success');
         setTimeout(() => {
           onClose();
-          setForm({ name: '', email: '', phone: '', country: '', agree: false });
+          setForm({
+            name: '',
+            email: '',
+            phone: '',
+            country: '',
+            agree: false,
+          });
           setSubmitStatus('idle');
         }, 2000);
       } else {
@@ -251,20 +260,19 @@ export default function VisaEnquiryPopup({
 
   if (!open) return null;
 
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-blue-900/20 backdrop-blur-md p-4">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg relative overflow-hidden border border-blue-100">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-blue-900/20 backdrop-blur-md p-2 sm:p-4 overflow-y-auto">
+      <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl w-full max-w-lg relative overflow-hidden border border-blue-100 my-2 max-h-[95vh] overflow-y-auto">
         {/* Decorative top bar */}
-        <div className="h-2 bg-gradient-to-r from-blue-600 to-blue-400 w-full" />
+        <div className="h-1.5 sm:h-2 bg-gradient-to-r from-blue-600 to-blue-400 w-full" />
 
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors p-2 hover:bg-gray-100 rounded-full"
+          className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-400 hover:text-gray-600 transition-colors p-1.5 sm:p-2 hover:bg-gray-100 rounded-full z-10"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
+            className="h-5 w-5 sm:h-6 sm:w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -278,40 +286,31 @@ export default function VisaEnquiryPopup({
           </svg>
         </button>
 
-        <div className="p-8">
-          <div className="flex justify-center mb-4">
-            <div className="bg-blue-50 p-3 rounded-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 text-blue-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
+        <div className="p-4 sm:p-6 md:p-8">
+          <div className="flex justify-center mb-2 sm:mb-4">
+            <Image
+              src="/logo/logo.jpg"
+              alt="SoulLink Travels"
+              width={120}
+              height={60}
+              className="h-12 sm:h-16 w-auto object-contain"
+            />
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center text-gray-800 leading-tight">
+          <h2 className="text-lg sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2 text-center text-gray-800 leading-tight">
             All it takes is 2 hours for a{' '}
             <span className="text-blue-600">visa-free</span> experience. <br />
-            <span className="text-blue-500 text-xl font-semibold">
+            <span className="text-blue-500 text-base sm:text-xl font-semibold">
               No Stress, No Delays
             </span>
           </h2>
-          <p className="mb-8 text-center text-gray-500 text-sm">
+          <p className="mb-4 sm:mb-6 text-center text-gray-500 text-xs sm:text-sm">
             Fill up the form and our Visa Assistance Team will back to you
             shortly
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div className="space-y-1">
                 <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider ml-1">
                   Your Name
@@ -322,7 +321,7 @@ export default function VisaEnquiryPopup({
                   placeholder="John Doe"
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-gray-50"
+                  className="w-full border border-gray-200 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-gray-50"
                   required
                 />
               </div>
@@ -336,13 +335,13 @@ export default function VisaEnquiryPopup({
                   placeholder="john@example.com"
                   value={form.email}
                   onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-gray-50"
+                  className="w-full border border-gray-200 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-gray-50"
                   required
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
               <div className="space-y-1">
                 <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider ml-1">
                   Phone Number
@@ -353,7 +352,7 @@ export default function VisaEnquiryPopup({
                   placeholder="+234 ..."
                   value={form.phone}
                   onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-gray-50"
+                  className="w-full border border-gray-200 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-gray-50"
                   required
                 />
               </div>
@@ -365,7 +364,7 @@ export default function VisaEnquiryPopup({
                   name="country"
                   value={form.country}
                   onChange={handleChange}
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-gray-50 appearance-none"
+                  className="w-full border border-gray-200 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-gray-50 appearance-none"
                   required
                 >
                   <option value="">Select Country</option>
@@ -378,19 +377,19 @@ export default function VisaEnquiryPopup({
               </div>
             </div>
 
-            <div className="flex items-start space-x-3 pt-2">
+            <div className="flex items-start space-x-2 sm:space-x-3 pt-1 sm:pt-2">
               <input
                 type="checkbox"
                 name="agree"
                 id="agree"
                 checked={form.agree}
                 onChange={handleChange}
-                className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded transition-all cursor-pointer"
+                className="mt-0.5 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded transition-all cursor-pointer"
                 required
               />
               <label
                 htmlFor="agree"
-                className="text-sm text-gray-600 cursor-pointer leading-tight"
+                className="text-xs sm:text-sm text-gray-600 cursor-pointer leading-tight"
               >
                 I agree to Term and Privacy Policy
               </label>
@@ -399,7 +398,7 @@ export default function VisaEnquiryPopup({
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full py-4 rounded-xl font-bold text-lg shadow-lg transition-all duration-200 mt-4 ${
+              className={`w-full py-3 sm:py-4 rounded-lg sm:rounded-xl font-bold text-sm sm:text-lg shadow-lg transition-all duration-200 mt-2 sm:mt-4 ${
                 submitStatus === 'success'
                   ? 'bg-green-500 text-white'
                   : submitStatus === 'error'
@@ -410,15 +409,37 @@ export default function VisaEnquiryPopup({
               {isSubmitting ? (
                 <span className="flex items-center justify-center gap-2">
                   <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="none"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    />
                   </svg>
                   Submitting...
                 </span>
               ) : submitStatus === 'success' ? (
                 <span className="flex items-center justify-center gap-2">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                   Submitted Successfully!
                 </span>

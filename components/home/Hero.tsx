@@ -42,7 +42,7 @@ export default function Hero() {
             <div className="text-sm">Successful Applications</div>
           </div>
           <div>
-            <span className="text-3xl font-bold">20+</span>
+            <span className="text-3xl font-bold">30+</span>
             <div className="text-sm">Countries Covered</div>
           </div>
         </div>
