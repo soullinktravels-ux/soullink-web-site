@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
 
     // Send email to Soullink
     await resend.emails.send({
-      from: 'Soullink Website <onboarding@resend.dev>',
+      from: 'Soullink Travels <info@soullinktravels.com>',
       to: 'info@soullinktravels.com',
       subject: `New Contact Form Submission from ${name}`,
       html: `
