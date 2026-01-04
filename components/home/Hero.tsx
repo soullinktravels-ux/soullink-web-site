@@ -16,7 +16,7 @@ export default function Hero() {
         </h1>
         <p className="text-lg md:text-2xl mb-8 font-medium animate-fade-in delay-100">
           Simplifying Visa Applications, Job Placement Abroad, and International
-          Travel for Nigerians
+          Travel for Nigerians.
         </p>
         <div className="flex gap-4 mb-8 animate-fade-in delay-200">
           <a
