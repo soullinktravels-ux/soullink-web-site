@@ -32,17 +32,15 @@ export default function Header() {
             priority
           />
         </Link>
-        <nav className="hidden md:flex gap-8 text-neutral-700 font-medium">
+        <nav className="hidden md:flex gap-8 text-neutral-700 font-medium items-center">
+          <Link href="/">Home</Link>
           <Link href="/services">Services</Link>
-          <Link href="/countries">Country Guides</Link>
-          <Link href="/process">Process</Link>
           <Link href="/about">About</Link>
-          <Link href="/blog">Blog</Link>
           <Link
             href="/contact"
-            className="ml-4 px-4 py-2 bg-secondary text-white rounded hover:bg-primary transition"
+            className="ml-4 px-5 py-2.5 bg-amber-500 text-white rounded-lg font-bold hover:bg-blue-700 transition shadow-md"
           >
-            Contact
+            Contact Us
           </Link>
         </nav>
         <button className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary">
